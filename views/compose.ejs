@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #002b5c;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #002b5c;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+header a {
+  color: #ffffff;
+}
+
+header a:hover {
+  color: #cccccc;
+}
+
+/* Compose Form Styles */
+.compose-container {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.compose-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-content: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  margin-bottom: 10px;
+}
+
+.publish-button {
+  background-color: #002b5c;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.publish-button:hover {
+  background-color: #00142c;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include("partials/header.ejs") %>
+    </header>
+    <main class="compose-container">
+        <form action="/" method="post" class="compose-form">
+            <div class="form-field">
+                <label for="title">Title:</label>
+                <input type="text" name="f" id="title" placeholder="Enter title here" class="input-field">
+            </div>
+            <div class="form-field">
+                <label for="post">Post:</label>
+                <textarea name="l" id="post" cols="30" rows="10" class="input-field"></textarea>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Publish" class="publish-button">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <%- include("partials/footer.ejs") %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #303d43;
+}
+
+.navbar {
+    background-color: #e1e9f1;
+    border-bottom: 2px solid #b4b4b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px;
+}
+
+.navbar-container h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-container h3 {
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar a {
+    color: #303d43;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+}
+
+.navbar a:active {
+    background-color: #b4b4b4;
+    color: #e1e9f1;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar a {
+        font-size: 1.1rem;
+    }
+}
+.post-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.post-container h1 {
+    font-size: 3rem;
+}
+
+.post-container p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}

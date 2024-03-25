@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+  margin: 15px auto;
+  width: 100%;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card:first-child {
+  margin-top: 20px;
+}
+
+.card-header {
+  padding: 10px 20px;
+  font-size: 2rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.card-body {
+  padding: 15px 20px;
+}
+
+.card-content {
+  display: -webkit-box;
+  max-height: 130px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-more {
+  color: #006aad;
+  display: inline-block;
+  margin-left: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .card-header {
+    text-align: left;
+  }
+  .card-body {
+    padding: 20px;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+        <div class="container">
+            <h1>Home Page</h1>
+            <% for( let i=0; i < title.length; i++ ) { %>
+                <div class="card">
+                    <div class="card-header">
+                        <%= title[i] %>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <%= text[i].length <=10 ? text[i] : text[i].substring(0, 10) %>
+                                <span>....</span>
+                        </div>
+                        <a href="/post/<%= low[i] %>" class="card-more">read more</a>
+                    </div>
+                </div>
+                <% } %>
+                    </div>
+                    <%- include("partials/footer.ejs") %>
+                        </body>
+            
+                        </html>
